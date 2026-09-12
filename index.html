@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namreh Goods — merch for people who read the changelog</title>
+<meta name="description" content="Small-batch dev merch. Stickers, mugs, and tees for people who read the changelog.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="window">
+  <div class="titlebar">
+    <span class="dot dot-red"></span>
+    <span class="dot dot-yellow"></span>
+    <span class="dot dot-green"></span>
+    <span class="titlebar-path">~/namreh-goods</span>
+  </div>
+
+  <header class="hero">
+    <p class="prompt">$ whoami</p>
+    <h1>Namreh Goods</h1>
+    <p class="tagline">Small-batch merch for people who read the changelog.</p>
+  </header>
+
+  <main>
+    <section class="catalog" id="shop">
+      <p class="prompt">$ ls ./products</p>
+
+      <div class="product" data-product="sticker-pack">
+        <div class="product-info">
+          <h2>404 Sticker Pack</h2>
+          <p class="product-desc">Six vinyl stickers. Waterproof, laptop-tested, mildly self-deprecating.</p>
+          <p class="product-meta">v1.2.0 &middot; in stock</p>
+        </div>
+        <div class="product-action">
+          <span class="price">$12</span>
+          <button class="buy-btn" data-product-name="404 Sticker Pack" data-product-price="12">Buy now</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="commit-mug">
+        <div class="product-info">
+          <h2>"git commit" Mug</h2>
+          <p class="product-desc">12oz ceramic. Holds coffee and the crushing weight of unreviewed PRs.</p>
+          <p class="product-meta">v1.0.3 &middot; in stock</p>
+        </div>
+        <div class="product-action">
+          <span class="price">$18</span>
+          <button class="buy-btn" data-product-name="git commit Mug" data-product-price="18">Buy now</button>
+        </div>
+      </div>
+
+      <div class="product" data-product="rubber-duck-tee">
+        <div class="product-info">
+          <h2>Rubber Duck Debugging Tee</h2>
+          <p class="product-desc">100% cotton. Explain your code to it. It will not judge you. Much.</p>
+          <p class="product-meta">v2.1.0 &middot; low stock</p>
+        </div>
+        <div class="product-action">
+          <span class="price">$28</span>
+          <button class="buy-btn" data-product-name="Rubber Duck Debugging Tee" data-product-price="28">Buy now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="prompt">$ cat about.md</p>
+      <p>Namreh Goods is a one-person shop making merch for the people who actually
+      read release notes. Everything is small-batch, printed to order, and shipped
+      from a garage that also contains at least one broken keyboard.</p>
+      <p>Scroll past this line if you're just here to buy stickers. No judgment.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="prompt">$ ./contact --new-message</p>
+      <h2>Get in touch</h2>
+      <p class="product-desc">
+        Bulk order, wholesale inquiry, or just want to say the mug changed your life?
+        Send a note below.
+      </p>
+      <form id="contact-form" class="contact-form" action="mailto:hello@namreh.net" method="POST" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="submit-btn">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p class="prompt">$ echo $COPYRIGHT</p>
+    <p>&copy; 2026 Namreh Goods. No trackers installed yet. That's the whole point.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
