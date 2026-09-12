@@ -72,6 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (product && price) {
     summaryEl.textContent = 'Thanks for your order — ' + product + ' ($' + price + ').';
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18326775426/E09TCL7K2fUcEILN8aJE',
+      'value': parseFloat(price),
+      'currency': 'USD',
+      'transaction_id': ''
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+    });
   }
 
   // --------------------------------------------------------------
