@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order confirmed — Namreh Goods</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18326775426"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18326775426');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order confirmed — Namreh Goods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="window">
-  <div class="titlebar">
-    <span class="dot dot-red"></span>
-    <span class="dot dot-yellow"></span>
-    <span class="dot dot-green"></span>
-    <span class="titlebar-path">~/namreh-goods/checkout</span>
-  </div>
+  <div class="window">
+    <div class="titlebar">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="titlebar-path">~/namreh-goods/checkout</span>
+    </div>
 
-  <header class="hero hero-confirm">
-    <p class="prompt">$ ./checkout --status</p>
-    <h1>200 OK</h1>
-    <p class="tagline" id="confirm-message">
-      Order confirmed. We'll email you a tracking number once it ships.
-    </p>
-  </header>
+    <header class="hero hero-confirm">
+      <p class="prompt">$ ./checkout --status</p>
+      <h1>200 OK</h1>
+      <p class="tagline" id="confirm-message">
+        Order confirmed. We'll email you a tracking number once it ships.
+      </p>
+    </header>
 
-  <main>
-    <section class="about">
-      <p class="prompt">$ cat receipt.txt</p>
-      <p id="order-summary">
-        <!--
+    <main>
+      <section class="about">
+        <p class="prompt">$ cat receipt.txt</p>
+        <p id="order-summary">
+          <!--
           STAGE 1 (Google Tag): fire a manual gtag('event', 'conversion', {...}) here.
           STAGE 5 (ECW): populate a hashed email/name here as user-provided data.
           Order details (name/price) arrive via the URL query string — see script.js.
         -->
-        Thanks for your order.
-      </p>
-      <p><a href="index.html" class="text-link">&larr; back to the shop</a></p>
-    </section>
-  </main>
+          Thanks for your order.
+        </p>
+        <p><a href="index.html" class="text-link">&larr; back to the shop</a></p>
+      </section>
+    </main>
 
-  <footer>
-    <p class="prompt">$ echo $COPYRIGHT</p>
-    <p>&copy; 2026 Namreh Goods.</p>
-  </footer>
-</div>
+    <footer>
+      <p class="prompt">$ echo $COPYRIGHT</p>
+      <p>&copy; 2026 Namreh Goods.</p>
+    </footer>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
