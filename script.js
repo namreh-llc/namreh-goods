@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // server-side; this is just enough for the tracking exercise.
       var params = new URLSearchParams({
         product: productName,
-        price: productPrice
+        price: productPrice,
+        transaction_id: crypto.randomUUID()
       });
 
       window.location.href = 'thank-you.html?' + params.toString();
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var params = new URLSearchParams(window.location.search);
   var product = params.get('product');
   var price = params.get('price');
+  var transaction_id = params.get('transaction_id');  
 
   if (product && price) {
     summaryEl.textContent = 'Thanks for your order — ' + product + ' ($' + price + ').';
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'send_to': 'AW-18326775426/E09TCL7K2fUcEILN8aJE',
       'value': parseFloat(price),
       'currency': 'USD',
-      'transaction_id': ''
+      'transaction_id': transaction_id || ''
       // 'new_customer': true /* calculate dynamically, populate with true/false */,
     });
   }
